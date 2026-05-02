@@ -9,7 +9,10 @@
   <body class="min-h-screen bg-[url('/media/background.jpg')] bg-cover bg-center bg-fixed flex items-center justify-center font-sans overflow-hidden">
 
     <header class="fixed top-0 left-0 right-0 bg-jysk-blue px-6 py-4 z-10 flex items-center justify-between">
-      <h1 class="text-white font-extrabold text-xl uppercase tracking-widest">HONK</h1>
+      <div class="flex items-baseline gap-2">
+        <h1 class="text-white font-extrabold text-xl uppercase tracking-widest">HONK</h1>
+        <span id="app-sha" class="text-blue-300 text-xs font-mono opacity-60"></span>
+      </div>
       <button
         id="info-btn"
         class="w-8 h-8 rounded-full border-2 border-white text-white font-bold text-sm flex items-center justify-center hover:bg-white hover:text-jysk-blue transition-colors duration-150 select-none"

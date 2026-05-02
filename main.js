@@ -2,6 +2,8 @@ const btn = document.getElementById('honk-btn');
 const goose = document.getElementById('goose');
 const honkText = document.getElementById('honk-text');
 
+document.getElementById('app-sha').textContent = __APP_SHA__;
+
 const infoBtn = document.getElementById('info-btn');
 const closeBtn = document.getElementById('close-btn');
 const modal = document.getElementById('info-modal');
