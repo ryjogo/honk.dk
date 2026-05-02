@@ -55,7 +55,9 @@ jobs:
           SHORT_SHA=$(git rev-parse --short HEAD)
           IMAGE="ghcr.io/ryjogo/honk.dk:sha-${SHORT_SHA}"
 
-          git clone https://x-access-token:${GH_TOKEN}@github.com/ryjogo/homelab-talos.git
+          git config --global http."https://github.com/".extraheader \
+            "AUTHORIZATION: basic $(echo -n "x-access-token:${GH_TOKEN}" | base64 -w0)"
+          git clone https://github.com/ryjogo/homelab-talos.git
           cd homelab-talos
 
           sed -i "s|image: ghcr.io/ryjogo/honk.dk:.*|image: ${IMAGE}|" \
