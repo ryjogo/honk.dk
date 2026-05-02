@@ -37,11 +37,25 @@ let honkCount = 0;
 
 const chillMsg = document.getElementById('chill-toast');
 const countdown = document.getElementById('countdown');
-const honkAudio = new Audio('/media/honk.mp3');
+
+let audioCtx = null;
+let audioBuffer = null;
+
+async function initAudio() {
+  if (audioBuffer) return;
+  audioCtx = new AudioContext();
+  const res = await fetch('/media/honk.mp3');
+  const raw = await res.arrayBuffer();
+  audioBuffer = await audioCtx.decodeAudioData(raw);
+}
 
 function playHonk() {
-  honkAudio.currentTime = 1;
-  honkAudio.play();
+  if (!audioCtx || !audioBuffer) return;
+  if (audioCtx.state === 'suspended') audioCtx.resume();
+  const source = audioCtx.createBufferSource();
+  source.buffer = audioBuffer;
+  source.connect(audioCtx.destination);
+  source.start(0, 1);
 }
 
 function showHonkText() {
@@ -66,8 +80,9 @@ function resetChill() {
   clearInterval(countdownInterval);
 }
 
-function triggerHonk() {
+async function triggerHonk() {
   if (btn.disabled) return;
+  await initAudio();
   playHonk();
   showHonkText();
 
