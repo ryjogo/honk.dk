@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 320" fill="none">
+  <!-- Body -->
+  <ellipse cx="155" cy="220" rx="90" ry="70" fill="#e8e0c8" stroke="#b0a880" stroke-width="2"/>
+
+  <!-- Wing detail -->
+  <ellipse cx="165" cy="225" rx="65" ry="45" fill="#d8d0b0" stroke="#b0a880" stroke-width="1.5"/>
+  <path d="M110 240 Q155 210 220 235" stroke="#b0a880" stroke-width="1.5" fill="none"/>
+  <path d="M115 255 Q160 225 218 248" stroke="#b0a880" stroke-width="1" fill="none"/>
+
+  <!-- Neck -->
+  <path d="M120 165 Q100 130 115 95 Q125 70 140 60" stroke="#d8d0b0" stroke-width="28" stroke-linecap="round" fill="none"/>
+  <path d="M120 165 Q100 130 115 95 Q125 70 140 60" stroke="#c8c0a8" stroke-width="24" stroke-linecap="round" fill="none"/>
+
+  <!-- Head -->
+  <ellipse cx="148" cy="52" rx="28" ry="24" fill="#c8c0a8" stroke="#b0a880" stroke-width="2"/>
+
+  <!-- Black cap / marking on head -->
+  <ellipse cx="148" cy="40" rx="22" ry="14" fill="#2a2a2a"/>
+  <path d="M128 48 Q138 38 168 44" fill="#2a2a2a"/>
+
+  <!-- White cheek patch -->
+  <ellipse cx="162" cy="56" rx="12" ry="9" fill="white"/>
+  <ellipse cx="134" cy="56" rx="12" ry="9" fill="white"/>
+
+  <!-- Eye -->
+  <circle cx="158" cy="48" r="4.5" fill="#1a1a1a"/>
+  <circle cx="159.5" cy="46.5" r="1.5" fill="white"/>
+
+  <!-- Beak -->
+  <path d="M168 54 L196 58 L192 65 L168 60 Z" fill="#f4a020" stroke="#c07800" stroke-width="1.5"/>
+  <!-- Beak nostril -->
+  <ellipse cx="182" cy="58" rx="3" ry="2" fill="#c07800" opacity="0.6"/>
+
+  <!-- Tail -->
+  <path d="M235 195 Q265 180 270 205 Q260 220 235 230" fill="#c8c0a8" stroke="#b0a880" stroke-width="1.5"/>
+
+  <!-- Legs -->
+  <line x1="140" y1="282" x2="135" y2="308" stroke="#f4a020" stroke-width="5" stroke-linecap="round"/>
+  <line x1="165" y1="285" x2="160" y2="310" stroke="#f4a020" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Feet -->
+  <path d="M122 308 Q130 305 135 308 Q138 313 135 315 Q128 316 122 308Z" fill="#f4a020" stroke="#c07800" stroke-width="1"/>
+  <path d="M135 308 Q143 304 148 308 Q150 313 148 315 Q140 317 135 308Z" fill="#f4a020" stroke="#c07800" stroke-width="1"/>
+  <path d="M147 308 Q148 300 153 308" stroke="#f4a020" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <path d="M147 310 Q155 307 160 310 Q163 315 160 317 Q153 318 147 310Z" fill="#f4a020" stroke="#c07800" stroke-width="1"/>
+  <path d="M160 310 Q168 306 173 310 Q175 315 173 317 Q165 319 160 310Z" fill="#f4a020" stroke="#c07800" stroke-width="1"/>
+  <path d="M172 310 Q173 302 178 310" stroke="#f4a020" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <!-- Grass tufts -->
+  <path d="M60 310 Q65 290 70 310" stroke="#5a9a3a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M70 312 Q78 288 85 312" stroke="#4a8a2a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M200 308 Q207 289 213 308" stroke="#5a9a3a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M215 310 Q220 292 228 310" stroke="#4a8a2a" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

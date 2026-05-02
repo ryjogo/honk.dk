@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #e8f4e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Georgia', serif;
+  overflow: hidden;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.goose-container {
+  position: relative;
+}
+
+.goose {
+  width: 280px;
+  height: auto;
+  transition: transform 0.05s ease;
+  filter: drop-shadow(4px 8px 12px rgba(0, 0, 0, 0.2));
+  cursor: pointer;
+  user-select: none;
+}
+
+.goose.honking {
+  animation: honk-wiggle 0.4s ease;
+}
+
+@keyframes honk-wiggle {
+  0%   { transform: rotate(0deg) scale(1); }
+  15%  { transform: rotate(-8deg) scale(1.08); }
+  30%  { transform: rotate(8deg) scale(1.1); }
+  50%  { transform: rotate(-5deg) scale(1.07); }
+  70%  { transform: rotate(5deg) scale(1.04); }
+  85%  { transform: rotate(-2deg) scale(1.02); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+#honk-btn {
+  background: #f4a020;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #c07800, 0 8px 16px rgba(0,0,0,0.2);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  user-select: none;
+}
+
+#honk-btn:hover {
+  background: #f5ad35;
+}
+
+#honk-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #c07800, 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#honk-btn:disabled {
+  background: #ccc;
+  box-shadow: 0 6px 0 #999, 0 8px 16px rgba(0,0,0,0.1);
+  cursor: not-allowed;
+  color: #eee;
+}
+
+.honk-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2a6a2a;
+  letter-spacing: 0.15em;
+  height: 4rem;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.5) translateY(10px);
+  transition: none;
+}
+
+.honk-text.show {
+  animation: pop-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.honk-text.hide {
+  animation: fade-out 0.4s ease forwards;
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(0.5) translateY(10px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes fade-out {
+  from { opacity: 1; transform: scale(1); }
+  to   { opacity: 0; transform: scale(1.1); }
+}
+
+.chill-msg {
+  font-size: 1.1rem;
+  color: #7a3a0a;
+  background: #fdf0d0;
+  border: 2px solid #f4a020;
+  border-radius: 12px;
+  padding: 0.6rem 1.2rem;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.chill-msg.show {
+  opacity: 1;
+  transform: translateY(0);
+}
