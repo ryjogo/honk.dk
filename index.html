@@ -9,10 +9,7 @@
   <body class="min-h-screen bg-[url('/media/background.jpg')] bg-cover bg-center bg-fixed flex items-center justify-center font-sans overflow-hidden">
 
     <header class="fixed top-0 left-0 right-0 bg-jysk-blue px-6 py-4 z-10 flex items-center justify-between">
-      <div class="flex items-baseline gap-2">
-        <h1 class="text-white font-extrabold text-xl uppercase tracking-widest">HONK</h1>
-        <span id="app-sha" class="text-white/50 text-xs font-mono"></span>
-      </div>
+      <h1 class="text-white font-extrabold text-xl uppercase tracking-widest">HONK</h1>
       <button
         id="info-btn"
         class="w-8 h-8 rounded-full border-2 border-white text-white font-bold text-sm flex items-center justify-center hover:bg-white hover:text-jysk-blue transition-colors duration-150 select-none"
@@ -46,7 +43,7 @@
       class="toast fixed bottom-8 left-4 right-4 bg-white text-gray-700 font-semibold text-sm px-5 py-3 rounded-xl shadow-2xl opacity-0 pointer-events-none flex items-center justify-center gap-2"
     >
       <span>🪿</span>
-      <span>You have been honking too much —</span>
+      <span>You have been honking too much ,</span>
       <span id="countdown" class="tabular-nums font-bold text-jysk-blue">10</span><span class="text-gray-400">s</span>
     </div>
 
@@ -63,15 +60,16 @@
         <button id="close-btn" class="text-gray-400 hover:text-gray-600 text-2xl leading-none ml-4 transition-colors">&times;</button>
       </div>
       <p class="text-gray-600 text-sm leading-relaxed mb-4">
-        Honk.dk was built for the rebellious of us who think abbreviations have gone too far. You know the feeling — someone drops a TLA, an OKR, a RACI, or a GTM in the middle of a sentence and half the room quietly nods along while understanding nothing. So when it happens, don't just sit there. Honk.
+        Honk.dk was built for the rebellious of us who think abbreviations have gone too far. You know the feeling , someone drops a TLA, an OKR, a RACI, or a GTM in the middle of a sentence and half the room quietly nods along while understanding nothing. So when it happens, don't just sit there. Honk.
+      </p>
+      <h3 class="text-jysk-blue font-bold text-base mb-2">I just got honkled at?</h3>
+      <p class="text-gray-600 text-sm leading-relaxed mb-4">
+        When you hear a honk, don't be offended , be grateful. Someone cared enough to ask. Open up to the honks, spell it out, and watch the room actually follow along.
       </p>
       <p class="text-gray-600 text-sm leading-relaxed mb-4">
         A honk is a friendly but firm reminder: <span class="font-semibold text-gray-700">say the full word</span>. Not the code. Not the shortcut. The actual thing you mean. Because when everyone has to decode before they can think, the conversation is already lost.
       </p>
-      <h3 class="text-jysk-blue font-bold text-base mb-2">I just got honkled at?</h3>
-      <p class="text-gray-600 text-sm leading-relaxed">
-        When you hear a honk, don't be offended — be grateful. Someone cared enough to ask. Open up to the honks, spell it out, and watch the room actually follow along.
-      </p>
+      <p class="text-gray-300 text-xs font-mono mt-6">v<span id="app-sha"></span></p>
     </div>
 
     <script type="module" src="main.js"></script>
