@@ -37,7 +37,7 @@ let honkCount = 0;
 
 const chillMsg = document.getElementById('chill-toast');
 const countdown = document.getElementById('countdown');
-const honkAudio = new Audio('/honk.mp3');
+const honkAudio = new Audio('/media/honk.mp3');
 
 function playHonk() {
   honkAudio.currentTime = 1;
