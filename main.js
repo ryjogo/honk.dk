@@ -2,13 +2,40 @@ const btn = document.getElementById('honk-btn');
 const goose = document.getElementById('goose');
 const honkText = document.getElementById('honk-text');
 
+const infoBtn = document.getElementById('info-btn');
+const closeBtn = document.getElementById('close-btn');
+const modal = document.getElementById('info-modal');
+const backdrop = document.getElementById('info-backdrop');
+
+function openModal() {
+  modal.classList.remove('hidden');
+  backdrop.classList.remove('hidden');
+  requestAnimationFrame(() => {
+    backdrop.classList.remove('opacity-0');
+    modal.classList.remove('opacity-0', 'translate-y-2');
+  });
+}
+
+function closeModal() {
+  backdrop.classList.add('opacity-0');
+  modal.classList.add('opacity-0', 'translate-y-2');
+  setTimeout(() => {
+    modal.classList.add('hidden');
+    backdrop.classList.add('hidden');
+  }, 200);
+}
+
+infoBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
+backdrop.addEventListener('click', closeModal);
+
 let textTimeout = null;
 let chillTimeout = null;
 let countdownInterval = null;
 let rateTimeout = null;
 let honkCount = 0;
 
-const chillMsg = document.getElementById('chill-msg');
+const chillMsg = document.getElementById('chill-toast');
 const countdown = document.getElementById('countdown');
 const honkAudio = new Audio('/honk.mp3');
 
@@ -19,7 +46,7 @@ function playHonk() {
 
 function showHonkText() {
   clearTimeout(textTimeout);
-  honkText.className = 'honk-text';
+  honkText.classList.remove('show', 'hide');
   honkText.textContent = 'HONK!';
 
   requestAnimationFrame(() => {
